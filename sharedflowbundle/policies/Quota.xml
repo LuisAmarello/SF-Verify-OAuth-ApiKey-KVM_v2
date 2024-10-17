@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota continueOnError="false" enabled="false" name="Quota" type="calendar">
+    <DisplayName>Quota</DisplayName>
+    <Properties/>
+    <Allow countRef="apiproduct.developer.quota.limit"/>
+    <Interval ref="apiproduct.developer.quota.interval"/>
+    <Distributed>false</Distributed>
+    <Synchronous>false</Synchronous>
+    <TimeUnit ref="apiproduct.developer.quota.timeunit "/>
+    <StartTime>2024-9-5 12:00:00</StartTime>
+</Quota>

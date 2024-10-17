@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault continueOnError="false" enabled="true" name="RF-Invalid-Access-Token">
+    <DisplayName>RF-Invalid-Access-Token</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+            </Headers>
+            <Payload contentType="application/json">
+                {
+                    "code": "401",
+                    "message": "Invalid OAuth Token" 
+
+                }</Payload>
+            <StatusCode>401</StatusCode>
+            <ReasonPhrase>Unauthorized</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

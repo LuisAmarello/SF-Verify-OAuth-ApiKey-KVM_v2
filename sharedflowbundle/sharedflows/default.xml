@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>CORS</Name>
+    </Step>
+    <Step>
+        <Name>OAuth-v2</Name>
+    </Step>
+    <Step>
+        <Name>Quota</Name>
+    </Step>
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = false)</Condition>
+        <Name>Verify-API-Key</Name>
+    </Step>
+    <!--Step>
+        <Condition>(proxy.pathsuffix MatchesPath "/access_token/verify")</Condition>
+        <Name>Verify-API-Key-From-Header</Name>
+    </Step-->
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = true)</Condition>
+        <Name>AM-Set-Error-Status-Code-Variable</Name>
+    </Step>
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = true)</Condition>
+        <Name>RF-Invalid-Access-Token</Name>
+    </Step>
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = false)</Condition>
+        <Name>AM-Remove-Authorization-Header</Name>
+    </Step>
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = false)</Condition>
+        <Name>KVM-GetKeys</Name>
+    </Step>
+    <Step>
+        <Condition>(oauthV2.OAuth-v2.failed = false)</Condition>
+        <Name>AM-Set-Variables</Name>
+    </Step>
+    <!--Step>
+        <Condition>(proxy.pathsuffix MatchesPath "/access_token/verify")</Condition>
+        <Name>KVM-Get-Keys-Verify-Path</Name>
+    </Step>
+    <Step>
+        <Condition>(proxy.pathsuffix MatchesPath "/access_token/verify")</Condition>
+        <Name>AM-Set-Variables-Verify-Path</Name>
+    </Step-->
+</SharedFlow>

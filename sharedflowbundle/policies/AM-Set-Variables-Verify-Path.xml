@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-Set-Variables-Verify-Path">
+    <DisplayName>AM-Set-Variables-Verify-Path</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignVariable>
+        <Name>audience</Name>
+        <Template>{verifyapikey.Verify-API-Key-From-Header.apiproduct.flow.product.audience}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>subject</Name>
+        <Template>{verifyapikey.Verify-API-Key-From-Header.apiproduct.flow.product.subject}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>custom_claim</Name>
+        <Template>{verifyapikey.Verify-API-Key-From-Header.apiproduct.flow.product.claim}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.product.cache.expiry.time</Name>
+        <Template>{verifyapikey.Verify-API-Key-From-Header.apiproduct.flow.product.cache.expiry.time}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>iss</Name>
+        <Template>https://{organization.name}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.params.scope</Name>
+        <Template>{scope}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>x-api-key</Name>
+        <Template>{apigee.client_id}</Template>
+    </AssignVariable>
+</AssignMessage>

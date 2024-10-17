@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations continueOnError="false" enabled="true" name="KVM-Get-Keys-Verify-Path">
+    <DisplayName>KVM-Get-Keys-Verify-Path</DisplayName>
+    <Scope>environment</Scope>
+    <ExpiryTimeInSecs>180</ExpiryTimeInSecs>
+    <MapName ref="verifyapikey.Verify-API-Key-From-Header.apiproduct.flow.product.kvm"/>
+    <Get assignTo="rsa_publickey">
+        <Key>
+            <Parameter>rsa_publickey</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.rsa_privatekey">
+        <Key>
+            <Parameter>rsa_privatekey</Parameter>
+        </Key>
+    </Get>
+</KeyValueMapOperations>

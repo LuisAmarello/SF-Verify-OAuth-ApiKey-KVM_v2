@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations name="KVM-GetKeys">
+    <Scope>environment</Scope>
+    <ExpiryTimeInSecs>180</ExpiryTimeInSecs>
+    <MapName ref="verifyapikey.Verify-API-Key.apiproduct.flow.product.kvm"/>
+    <Get assignTo="rsa_publickey">
+        <Key>
+            <Parameter>rsa_publickey</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.rsa_privatekey">
+        <Key>
+            <Parameter>rsa_privatekey</Parameter>
+        </Key>
+    </Get>
+</KeyValueMapOperations>

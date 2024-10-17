@@ -1,0 +1,24 @@
+<SharedFlowBundle revision="8" name="SF-Verify-OAuth-ApiKey-KVM">
+    <DisplayName></DisplayName>
+    <Description>flujo de autorizacion interna en Apigee</Description>
+    <CreatedAt>1729129063428</CreatedAt>
+    <LastModifiedAt>1729129063428</LastModifiedAt>
+    <Policies>
+        <Policy>OAuth-v2</Policy>
+        <Policy>Verify-API-Key</Policy>
+        <Policy>KVM-GetKeys</Policy>
+        <Policy>AM-Set-Variables</Policy>
+        <Policy>CORS</Policy>
+        <Policy>AM-Set-Error-Status-Code-Variable</Policy>
+        <Policy>RF-Invalid-Access-Token</Policy>
+        <Policy>AM-Remove-Authorization-Header</Policy>
+        <Policy>Quota</Policy>
+        <Policy>Verify-API-Key-From-Header</Policy>
+        <Policy>KVM-Get-Keys-Verify-Path</Policy>
+        <Policy>AM-Set-Variables-Verify-Path</Policy>
+    </Policies>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+    <subType>SharedFlow</subType>
+</SharedFlowBundle>
